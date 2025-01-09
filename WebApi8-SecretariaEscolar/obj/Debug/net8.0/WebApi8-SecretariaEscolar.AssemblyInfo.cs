@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApi8-SecretariaEscolar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d86ce88cea47a23db51c50c64577bf1f3e992eb8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90f50016fcac04f628481a96c99d6d83f202b859")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApi8-SecretariaEscolar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApi8-SecretariaEscolar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
