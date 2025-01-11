@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi8_SecretariaEscolar.Data;
 using WebApi8_SecretariaEscolar.Service.Professor;
+using WebApi8_SecretariaEscolar.Service.Turma;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IProfessorInterface, ProfessorService>();
+builder.Services.AddScoped<ITurmaInterface, TurmaService>();
 
 builder.Services.AddDbContext<AppDbContext>(options => 
 {

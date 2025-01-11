@@ -65,7 +65,6 @@ namespace WebApi8_SecretariaEscolar.Service.Professor
                 resposta.Status = false;
                 return resposta;
             }
-            throw new NotImplementedException();
         }
 
         public async Task<ResponseModel<List<ProfessorModel>>> ListarProfessores()

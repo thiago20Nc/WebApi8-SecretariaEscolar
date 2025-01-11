@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "WebApi8_SecretariaEscolar.Controllers.ProfessorController",
-    "Method": "BuscararProfessoresId",
-    "RelativePath": "api/Professor/BucarProfessoresId/{idProf}",
+    "Method": "BuscarProfessoresId",
+    "RelativePath": "api/Professor/BuscarProfessoresId/{idProf}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "WebApi8_SecretariaEscolar.Controllers.ProfessorController",
     "Method": "BuscararProfessoresIdTurma",
-    "RelativePath": "api/Professor/BucarProfessoresIdTurma/{idTurma}",
+    "RelativePath": "api/Professor/BuscarProfessoresIdTurma/{idTurma}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -140,6 +140,156 @@
     "ReturnTypes": [
       {
         "Type": "WebApi8_SecretariaEscolar.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[WebApi8_SecretariaEscolar.Models.ProfessorModel, WebApi8-SecretariaEscolar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi8_SecretariaEscolar.Controllers.TurmaController",
+    "Method": "BuscarTurmaId",
+    "RelativePath": "api/Turma/BuscarTurmaId/{idTurma}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTurma",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi8_SecretariaEscolar.Models.ResponseModel\u00601[[WebApi8_SecretariaEscolar.Models.TurmaModel, WebApi8-SecretariaEscolar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi8_SecretariaEscolar.Controllers.TurmaController",
+    "Method": "BuscarTurmaIdProf",
+    "RelativePath": "api/Turma/BuscarTurmaIdProfessor/{idProf}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProf",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi8_SecretariaEscolar.Models.ResponseModel\u00601[[WebApi8_SecretariaEscolar.Models.TurmaModel, WebApi8-SecretariaEscolar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi8_SecretariaEscolar.Controllers.TurmaController",
+    "Method": "CriarTurma",
+    "RelativePath": "api/Turma/CriarTurma",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "turmaCriacaoDto",
+        "Type": "WebApi8_SecretariaEscolar.Dto.Turma.TurmaCriacaoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi8_SecretariaEscolar.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[WebApi8_SecretariaEscolar.Models.TurmaModel, WebApi8-SecretariaEscolar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi8_SecretariaEscolar.Controllers.TurmaController",
+    "Method": "EditarProfessor",
+    "RelativePath": "api/Turma/EditarTurma",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "turmaEdicaoDto",
+        "Type": "WebApi8_SecretariaEscolar.Dto.Turma.TurmaEdicaoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi8_SecretariaEscolar.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[WebApi8_SecretariaEscolar.Models.TurmaModel, WebApi8-SecretariaEscolar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi8_SecretariaEscolar.Controllers.TurmaController",
+    "Method": "ExcluirTurma",
+    "RelativePath": "api/Turma/ExcluirTurma/{idTurma}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTurma",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi8_SecretariaEscolar.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[WebApi8_SecretariaEscolar.Models.TurmaModel, WebApi8-SecretariaEscolar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi8_SecretariaEscolar.Controllers.TurmaController",
+    "Method": "ListarProfessores",
+    "RelativePath": "api/Turma/ListarTurmas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi8_SecretariaEscolar.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[WebApi8_SecretariaEscolar.Models.TurmaModel, WebApi8-SecretariaEscolar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

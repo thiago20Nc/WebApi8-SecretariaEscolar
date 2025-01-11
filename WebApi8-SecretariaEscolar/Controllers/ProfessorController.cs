@@ -11,20 +11,20 @@ namespace WebApi8_SecretariaEscolar.Controllers
     public class ProfessorController : ControllerBase
     {
        
-        private readonly IProfessorInterface _professorInterface;
+       private readonly IProfessorInterface _professorInterface;
        public ProfessorController(IProfessorInterface professorInterface)  
        {
             _professorInterface = professorInterface;
        }
 
-        [HttpGet("BucarProfessoresId/{idProf}")]
-        public async Task<ActionResult<ResponseModel<ProfessorModel>>> BuscararProfessoresId(int idProf)
+        [HttpGet("BuscarProfessoresId/{idProf}")]
+        public async Task<ActionResult<ResponseModel<ProfessorModel>>> BuscarProfessoresId(int idProf)
         {
             var professor = await _professorInterface.BuscarProfessorId(idProf);
             return Ok(professor);
         }
 
-        [HttpGet("BucarProfessoresIdTurma/{idTurma}")]
+        [HttpGet("BuscarProfessoresIdTurma/{idTurma}")]
         public async Task<ActionResult<ResponseModel<ProfessorModel>>> BuscararProfessoresIdTurma(int idTurma)
         {
             var professor = await _professorInterface.BuscarProfessorIdTurma(idTurma);

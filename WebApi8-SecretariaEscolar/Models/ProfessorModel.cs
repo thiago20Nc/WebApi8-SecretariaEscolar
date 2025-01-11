@@ -9,6 +9,6 @@ namespace WebApi8_SecretariaEscolar.Models
         public string Diciplina { get; set; }
 
         [JsonIgnore]
-        public ICollection<TurmaModel> Turmas { get; set; }
+        public ICollection<TurmaModel> Turma { get; set; }
     }
 }
